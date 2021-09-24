@@ -64,7 +64,7 @@ GLaDos 目前基础套餐最便宜是 19 块钱，30天，200G 流量，100mbps 
 
 注册后显示激活页面，可以输入激活码，输入后点 Next 注册成功。
 
-**注册时请使用我的邀请码 `RCSOV-TBI3L-7BATL-4RI09` 可以相互获得免费天数**
+**注册时请使用我的邀请码 `LWDC2-W5VQP-OZ5LR-EPOMU` 可以相互获得免费天数**
 
 ![激活](imgs/activation.png)
 
