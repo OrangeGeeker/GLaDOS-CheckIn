@@ -57,7 +57,7 @@ const GLaDOSCheckIn = async () => {
     const statusResp = await status();
     const leftDays = parseInt(statusResp?.data?.data?.leftDays);
     const email = statusResp?.data?.data?.email;
-    console.log(email, leftDays, checkInMessage);
+    
     axios.defaults.headers.common.cookie = "";
 
     if (SERVER_CHAN) {
