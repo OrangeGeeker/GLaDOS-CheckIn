@@ -14,12 +14,14 @@
       - [1-1. 获取 Telegram bot 的 `token`（不需要消息推送的可以跳过）](#1-1-获取-telegram-bot-的-token不需要消息推送的可以跳过)
       - [1-2. 获取 Telegram bot 所在对话的 `chat_id`（不需要消息推送的可以跳过）](#1-2-获取-telegram-bot-所在对话的-chat_id不需要消息推送的可以跳过)
       - [2-1. 获取 Server 酱的 SendKey（不需要消息推送的可以跳过）](#2-1-获取-server-酱的-sendkey不需要消息推送的可以跳过)
-      - [2-2. 配置企业微信推送通道](#2-2-配置企业微信推送通道)
+      - [2-2. 配置企业微信推送通道（不需要消息推送的可以跳过）](#2-2-配置企业微信推送通道不需要消息推送的可以跳过)
       - [3. 获取 GLaDOS 账号的 `cookie`](#3-获取-glados-账号的-cookie)
     - [Step 2 Fork 此仓库](#step-2-fork-此仓库)
     - [Step 3 设置仓库 Secrets](#step-3-设置仓库-secrets)
-    - [启用Action](#启用action)
-    - [查看运行结果](#查看运行结果)
+      - [需要添加的 Secrets 如下](#需要添加的-secrets-如下)
+      - [填写 Secrets](#填写-secrets)
+    - [Step 4 启用Action](#step-4-启用action)
+    - [Step 5 查看运行结果](#step-5-查看运行结果)
   - [修改定时任务](#修改定时任务)
 
 GLaDOS 是一家梯子服务商，速度还行，且相对便宜，日常使用足够，在其官网每天签到一次，可以延长一天到期时间，比较不错。
@@ -183,9 +185,9 @@ Fork 此仓库至你自己的 github 账号下
 
 在你 Fork 的仓库的 `Settings` 页面，`Secrets` tab 下，点击 `New repository secret` 按钮，添加 Secrets
 
-需要添加的 Secrets 如下：
+#### 需要添加的 Secrets 如下
 
-- **SERVER_CHAN** 天 server 酱网站获取到的 `sendKey` (不需要可以不创建或不设置)
+- **SERVER_CHAN** 填 server 酱网站获取到的 `sendKey` (不需要可以不创建或不设置)
 - **BOT_CHAT_ID** 填 Telegram bot 所在的 chat_id (不需要可以不创建或不设置)
   - 配置了 SERVER_CHAN，此项可以不配置
 - **BOT_TOKEN** 填 Telegram bot 的 token（不需要可以不创建或不设置）
@@ -198,18 +200,20 @@ Fork 此仓库至你自己的 github 账号下
 
 ![secret](imgs/secrets-page.png)
 
+#### 填写 Secrets
+
 Name 处填写 `BOT_CHAT_ID`，Value 处填写 `1xxxxxxx0`，点击 Add secret 既添加成功 `BOT_CHAT_ID`
 
 其他三个 Secrets 类似。
 
 ![secretadd](imgs/secretsadd.png)
 
-### 启用Action
+### Step 4 启用Action
 
 1. 点击 `Actions`，再点击 **I understand my workflows, go ahead and enable them**，如果没有请忽略
 1. 点击仓库（你自己的），修改除 `imgs` 文件夹和 `README.md` 以外的内容，并进行**提交 + 推送**即可触发 Action 脚本运行
 
-### 查看运行结果
+### Step 5 查看运行结果
 
 ![actions](imgs/actions.png)
 
@@ -218,6 +222,6 @@ Name 处填写 `BOT_CHAT_ID`，Value 处填写 `1xxxxxxx0`，点击 Add secret �
 1. 打开 `.github/workflows/checkin.yml`
 2. 修改 `crontab 表达式`
 
-鼠标放到数字上去，就有释义，这里不再赘述。
+在文件编辑模式下，鼠标放到 crontab 表达式的数字上，就有说明解释，这里不再赘述。
 
 ![schedule](imgs/schedule.png)
