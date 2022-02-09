@@ -1,29 +1,29 @@
-name: GLaDOS-CheckIn
-on:
-  push:
-    branches: [ main ]
-    paths-ignore: 
-      - 'README.md'
-      - 'imgs/**'
-  schedule:
-    - cron: 0 23 * * *
-  watch:
-    types: [started]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '14.x'
-      - name: install axios
-        run: npm install axios
-      - name: CheckIn
-        run: node checkin.js
-        env:    
-          COOKIE_LIST: ${{ secrets.COOKIE_LIST }}
-          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          BOT_CHAT_ID: ${{ secrets.BOT_CHAT_ID }}
-          SERVER_CHAN: ${{ secrets.SERVER_CHAN }}
+#name: GLaDOS-CheckIn
+#on:
+#  push:
+#    branches: [ main ]
+#    paths-ignore: 
+#      - 'README.md'
+#      - 'imgs/**'
+#  schedule:
+#    - cron: 0 23 * * *
+#  watch:
+#    types: [started]
+#jobs:
+#  build:
+##    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#      - name: setup Node.js
+#        uses: actions/setup-node@v1
+#        with:
+#          node-version: '14.x'
+#      - name: install axios
+##        run: npm install axios
+ #     - name: CheckIn
+ ##       run: node checkin.js
+#        env:    
+#          COOKIE_LIST: ${{ secrets.COOKIE_LIST }}
+#          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+#          BOT_CHAT_ID: ${{ secrets.BOT_CHAT_ID }}
+#          SERVER_CHAN: ${{ secrets.SERVER_CHAN }}
