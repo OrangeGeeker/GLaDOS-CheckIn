@@ -42,6 +42,8 @@ GLaDOS 是一家梯子服务商，速度还行，且相对便宜，日常使用�
 
 本脚本签到成功后，通过 Telegram bot 推送结果消息，当然也可以使用诸如 **server酱** 进行推送，这里以 Telegram bot 和 server 酱为例。
 
+**由于 Github 的限制，公开的仓库60天没有活动的话，Action 会停止运行，因此一般隔一段时间将 README.md 更新一下就行了，或者收到禁用邮件后，在 Github 将 Action 启用就可以了。**
+
 ## GLaDOS
 
 > 使用 GLaDOS 掌控您的网络，GLaDOS 提供最快速、最稳定、最安全的端点，让用户放心访问高速国际互联网、Netflix 和隐私。
