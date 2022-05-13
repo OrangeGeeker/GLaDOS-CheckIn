@@ -1,5 +1,12 @@
 # GLaDOS 梯子 和 自动每日签到
 
+## ChangeLog
+
+- 2022-05-13
+
+最近发现签到失效，返回的消息是`oops, token error`，查看了后，发现官方修改了 POST 的 data，在此修改了 axios post 内容，可以签到成功。
+
+
 - [GLaDOS 梯子 和 自动每日签到](#glados-梯子-和-自动每日签到)
   - [重要说明](#重要说明)
   - [自动签到说明](#自动签到说明)
@@ -42,7 +49,7 @@ GLaDOS 是一家梯子服务商，速度还行，且相对便宜，日常使用�
 
 本脚本签到成功后，通过 Telegram bot 推送结果消息，当然也可以使用诸如 **server酱** 进行推送，这里以 Telegram bot 和 server 酱为例。
 
-**由于 Github 的限制，公开的仓库60天没有活动的话，Action 会停止运行，因此一般隔一段时间将 README.md 更新一下就行了，或者收到禁用邮件后，在 Github 将 Action 启用就可以了。**（私有仓库不清楚）
+**由于 Github 的限制，公开的仓库60天没有活动的话，Action 会停止运行，~~因此一般隔一段时间将 README.md 更新一下就行了，或者~~收到禁用邮件后，在 Github 仓库的 Action 里，将 Action 启用就可以了。**（私有仓库不清楚）
 
 ## GLaDOS
 
