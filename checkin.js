@@ -52,16 +52,21 @@ const GLaDOSCheckIn = async () => {
   for (let i = 0, size = cookieList.length; i < size; i++) {
     accountCookie = cookieList[i];
     axios.defaults.headers.common.cookie = accountCookie;
+    console.log("1111111111111111");
     const checkInResp = await checkIn();
+    console.log("2222222222222222");
     const checkInMessage = checkInResp?.data?.message;
     const statusResp = await status();
+    console.log("3333333333333333");
     const leftDays = parseInt(statusResp?.data?.data?.leftDays);
+    console.log("4444444444444");
     const email = statusResp?.data?.data?.email;
     
     axios.defaults.headers.common.cookie = "";
 
     if (SERVER_CHAN) {
       serverchan(checkInMessage, leftDays, email);
+      console.log("55555555555555555");
     } else if (BOT_TOKEN) {
       tgBotNotify(checkInMessage, leftDays, email);
     }
