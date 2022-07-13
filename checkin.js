@@ -68,7 +68,7 @@ const GLaDOSCheckIn = async () => {
   } 
 };
 
-GLaDOSCheckIn();
+GLaDOSCheckIn().catch(error => console.log(error.message));
 
 // const test = async () => {
   // serverchan("Please Try Tomorrow", "1000", "orange@lisa2leo.com");
