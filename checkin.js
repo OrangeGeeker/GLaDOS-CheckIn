@@ -14,6 +14,7 @@ const checkIn = async () => {
     },
     headers: {
       Authority: "glados.rocks",
+      
       Authorization:"2955106794105734180656862944519-1040-1560",
     }
   });
