@@ -10,7 +10,7 @@ const checkIn = async () => {
     method: "post",
     url: "https://glados.rocks/api/user/checkin",
     data: {
-      token: "glados.network",
+      token: "glados.rocks",
     },
   });
 };
